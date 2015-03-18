@@ -21,7 +21,8 @@
       
     <!--Live Random Data -->
     <script type="text/javascript">
-	window.onload = function () {
+	
+        window.onload = function () {
 
 		var dps = []; // dataPoints
 
@@ -30,14 +31,15 @@
 				text: "Exhaust Temperature"
 			},			
 			data: [{
-				type: "line",
+				type: "splineArea",
+                color: "rgba(255, 0, 29, 0.6)",
 				dataPoints: dps 
-			}]
+			}]    
 		});
 
 		var xVal = 0;
 		var yVal = 100;	
-		var updateInterval = 20;
+		var updateInterval = 30;
 		var dataLength = 500; // number of dataPoints visible at any point
 
 		var updateChart = function (count) {
@@ -69,6 +71,7 @@
 
 	}
 	</script>
+
 	<script type="text/javascript" src="canvasjs/canvasjs.min.js"></script>
     
 
@@ -95,7 +98,7 @@
       <ul class="nav navbar-nav">
         <li><a href="#"><span class="glyphicon glyphicon-home" style="font-size:25px;" aria-hidden="true"></span></a></li>
         <li><a href="#"><span class="glyphicon glyphicon-edit" style="font-size:25px;" aria-hidden="true"></span></a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-stats" style="font-size:25px;" aria-hidden="true"></span></a></li>
+        <li><a href="#"><span id="glyphicon glyphicon-stats" style="font-size:25px;" aria-hidden="true"></span></a></li>
       </ul>
         
       <ul class="nav navbar-nav navbar-right">
@@ -118,6 +121,16 @@
     
     <!--Window Size Of Realtime Data-->
     <div id="chartContainer" style="height: 300px; width:100%;"></div>
+
+    <script>
+
+    $(function(){
+    	$('#glyphicon glyphicon-stats').on('click', function('#glyphicon glyphicon-stats') {
+    		
+    	}); 
+    });
+
+    </script>
     
 </body> <!-- End body-->
 
