@@ -28,11 +28,11 @@
 
 		var chart = new CanvasJS.Chart("chartContainer",{
 			title :{
-				text: "Exhaust Temperature"
+				text: "Temp Bank 1 (TB1S1)"
 			},			
 			data: [{
 				type: "splineArea",
-                color: "rgba(255, 0, 29, 0.6)",
+                color: "rgba(255, 0, 29, 0.79)",
 				dataPoints: dps 
 			}]    
 		});
@@ -98,7 +98,7 @@
       <ul class="nav navbar-nav">
         <li><a href="#"><span class="glyphicon glyphicon-home" style="font-size:25px;" aria-hidden="true"></span></a></li>
         <li><a href="#"><span class="glyphicon glyphicon-edit" style="font-size:25px;" aria-hidden="true"></span></a></li>
-        <li><a href="#"><span id="glyphicon glyphicon-stats" style="font-size:25px;" aria-hidden="true"></span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-stats" style="font-size:25px;" aria-hidden="true"></span></a></li>
       </ul>
         
       <ul class="nav navbar-nav navbar-right">
@@ -125,8 +125,8 @@
     <script>
 
     $(function(){
-    	$('#glyphicon glyphicon-stats').on('click', function('#glyphicon glyphicon-stats') {
-    		
+    	$('.glyphicon glyphicon-stats').on('click', function() {
+			$('#chartContainer').toggle();    		   
     	}); 
     });
 
